@@ -25,7 +25,7 @@ async def docs_upload(file:UploadFile=File(...)):
         text=content.decode("utf-8")
         doc_id+=1
     except Exception:
-        raise ValueError("Upload only text document")
+        raise HTTPException (status_code=400,detail="Upload only text document")
     new_doc={
         "id":doc_id,
         "filename":file.filename,
