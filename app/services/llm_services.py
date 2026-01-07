@@ -40,3 +40,4 @@ You are helpful assistant your job is to answer to user question
         self.history.append(f"user_input:{user_input}")
         self.history.append(f"bot_reply:{bot_reply}")
         return bot_reply
+    
